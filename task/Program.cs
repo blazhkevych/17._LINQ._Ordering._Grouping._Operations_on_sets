@@ -52,7 +52,7 @@ internal class Program
 
         // Упорядочить имена и фамилии сотрудников по алфавиту, которые проживают в Украине. Выполнить запрос немедленно.
         var query1 = employees
-            .Where(e => e.DepId == 2)
+            .Where(e => e.DepId != 3)
             .OrderBy(e => e.FirstName)
             .ThenBy(e => e.LastName)
             .Select(e => new { e.FirstName, e.LastName });
